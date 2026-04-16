@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交易日历</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { text-align: center; color: white; margin-bottom: 30px; font-size: 2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        .date-section { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .date-title { font-size: 1.3em; color: #333; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #667eea; }
+        .report-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+        @media (max-width: 600px) { .report-grid { grid-template-columns: 1fr; } }
+        .report-card { background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%); border-radius: 10px; padding: 20px; transition: all 0.3s ease; border-left: 4px solid #667eea; }
+        .report-card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .report-card h3 { color: #333; font-size: 1.1em; margin-bottom: 8px; }
+        .report-card .time { color: #888; font-size: 0.9em; margin-bottom: 12px; }
+        .report-card a { display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; padding: 8px 20px; border-radius: 20px; font-size: 0.9em; transition: all 0.3s ease; }
+        .report-card a:hover { opacity: 0.9; transform: scale(1.02); }
+        .footer { text-align: center; color: rgba(255,255,255,0.8); margin-top: 30px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 交易日历</h1>
+
+        <!-- 2026年4月16日 -->
+        <div class="date-section">
+            <h2 class="date-title">📅 2026年4月16日 星期四</h2>
+            <div class="report-grid">
+                <div class="report-card">
+                    <h3>🌅 早盘策略</h3>
+                    <div class="time">09:00</div>
+                    <a href="https://coze-coding-project.tos.coze.site/cli_attachment/2026-04-16/2596416420580464_c84bcd06a0047543b7efc7a078e5f397_%E6%97%A9%E7%9B%98%E7%AD%96%E7%95%A5_20260416.html?sign=1776416677-c80cbf99dc-0-948dfc36403b28dd4902f68a05f5db1f213a9ccfaf13a2a2fed24ccd9a74f30f" target="_blank">查看报告 →</a>
+                </div>
+                <div class="report-card">
+                    <h3>📈 上午盘面速览</h3>
+                    <div class="time">10:30</div>
+                    <a href="https://coze-coding-project.tos.coze.site/cli_attachment/2026-04-16/2596416420580464_ad525e1edbf025644bc1316b08201604_%E4%B8%8A%E5%8D%88%E7%9B%98%E9%9D%A2%E9%80%9F%E8%A7%88_20260416.html?sign=1776416678-8dc29750ad-0-7c92d98894399ef06efd34e3f94e49e51c9987cc52168eb1f41fb826907a4bf2" target="_blank">查看报告 →</a>
+                </div>
+                <div class="report-card">
+                    <h3>🔍 详细速览</h3>
+                    <div class="time">11:30</div>
+                    <a href="https://coze-coding-project.tos.coze.site/cli_attachment/2026-04-16/2596416420580464_984d8cc3cfdea89e8ce5bb94a6b711ab_%E8%AF%A6%E7%BB%86%E9%80%9F%E8%A7%88_20260416.html?sign=1776416677-f601d9be36-0-10d6342867f644f3de3dc47a5ab362ead5c382eff942e9cf0ca514eb1be7a3a9" target="_blank">查看报告 →</a>
+                </div>
+                <div class="report-card">
+                    <h3>📉 收盘复盘</h3>
+                    <div class="time">15:30</div>
+                    <a href="https://coze-coding-project.tos.coze.site/cli_attachment/2026-04-16/2596416420580464_1e58f1e81d98a6ba6679789a5297f1c7_%E6%94%B6%E7%9B%98%E5%A4%8D%E7%9B%98_20260416.html?sign=1776416678-248092a0bf-0-517baf56933d40f5148bb0524ef02b49455fc50db49e9cc0e9ef5a773640dd8c" target="_blank">查看报告 →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2026年4月15日 -->
+        <div class="date-section">
+            <h2 class="date-title">📅 2026年4月15日 星期三</h2>
+            <div class="report-grid">
+                <div class="report-card">
+                    <h3>📈 上午盘面速览</h3>
+                    <div class="time">10:30</div>
+                    <a href="https://coze-coding-project.tos.coze.site/cli_attachment/2026-04-16/2596416420580464_7473b666fd0cf04d708942436988c612_%E4%B8%8A%E5%8D%88%E7%9B%98%E9%9D%A2%E9%80%9F%E8%A7%88_20260415.html?sign=1776417155-6a2f04122b-0-80188448073c7860ae992766ae3b136d06fdcc723dc17beb15dc06f7d6dab770" target="_blank">查看报告 →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2026年4月9日 -->
+        <div class="date-section">
+            <h2 class="date-title">📅 2026年4月9日 星期三</h2>
+            <div class="report-grid">
+                <div class="report-card">
+                    <h3>📊 A50早盘分析</h3>
+                    <div class="time">09:15</div>
+                    <a href="https://coze-coding-project.tos.coze.site/cli_attachment/2026-04-16/2596416420580464_6aedb1a6b54c26eed204025bdd26ed23_A50%E6%97%A9%E7%9B%98%E5%88%86%E6%9E%90_20260409.html?sign=1776417155-5685c8c25a-0-01381a14325b198ee395b99c8f380abc568c9d1501c39ec6c24a6b0652dbc639" target="_blank">查看报告 →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">由 星期五 自动生成 | 数据仅供参考</div>
+    </div>
+</body>
+</html>
