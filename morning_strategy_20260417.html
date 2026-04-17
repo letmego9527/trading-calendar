@@ -3,359 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>早盘策略 2026年4月17日</title>
+    <title>早盘策略 | 2026年4月17日</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; padding: 20px; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .header { background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%); color: white; padding: 30px; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(26,115,232,0.3); }
-        .header h1 { font-size: 28px; margin-bottom: 8px; }
-        .header .date { opacity: 0.9; font-size: 16px; }
-        .header .subtitle { margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.3); font-size: 14px; opacity: 0.85; }
-        .card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
-        .card h2 { font-size: 18px; color: #1a73e8; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #e8f0fe; }
-        .card h2 .icon { margin-right: 8px; }
-        table { width: 100%; border-collapse: collapse; font-size: 14px; }
-        th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
-        th { background: #f8f9fa; color: #555; font-weight: 600; }
-        tr:hover { background: #f8f9fa; }
-        .up { color: #e53935; }
-        .down { color: #43a047; }
-        .flat { color: #757575; }
-        .signal-box { display: flex; gap: 12px; margin-top: 16px; }
-        .signal { flex: 1; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 16px; border-radius: 10px; border-left: 4px solid #43a047; }
-        .signal h3 { font-size: 14px; color: #2e7d32; margin-bottom: 6px; }
-        .signal p { font-size: 13px; color: #555; }
-        .warning { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left-color: #ff9800 !important; }
-        .warning h3 { color: #e65100 !important; }
-        .prediction { background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 20px; border-radius: 10px; margin-top: 16px; }
-        .prediction h3 { color: #1565c0; margin-bottom: 12px; font-size: 16px; }
-        .prediction-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-        .pred-item { background: white; padding: 12px; border-radius: 8px; text-align: center; }
-        .pred-item .label { font-size: 12px; color: #666; margin-bottom: 4px; }
-        .pred-item .value { font-size: 18px; font-weight: 600; color: #1a73e8; }
-        .pred-item .range { font-size: 12px; color: #888; margin-top: 4px; }
-        .stock-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
-        .stock-item { background: #f8f9fa; padding: 14px; border-radius: 8px; border-left: 3px solid #1a73e8; }
-        .stock-item h4 { font-size: 14px; color: #1a73e8; margin-bottom: 6px; }
-        .stock-item .price { font-size: 16px; font-weight: 600; }
-        .stock-item .change { font-size: 13px; margin-left: 8px; }
-        .stock-item .info { font-size: 12px; color: #666; margin-top: 4px; }
-        .section-divider { height: 1px; background: #e0e0e0; margin: 20px 0; }
-        .footer { text-align: center; color: #888; font-size: 12px; margin-top: 20px; padding-top: 16px; border-top: 1px solid #e0e0e0; }
-        @media (max-width: 768px) {
-            .header h1 { font-size: 22px; }
-            .card { padding: 16px; }
-            table { font-size: 12px; }
-            th, td { padding: 8px 6px; }
-            .signal-box { flex-direction: column; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8; color: #333; background: #f5f7fa;
+            padding: 20px;
         }
+        .container { max-width: 1000px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #fff; padding: 40px 30px; text-align: center; }
+        .header h1 { font-size: 28px; margin-bottom: 10px; }
+        .header .date { font-size: 18px; opacity: 0.9; }
+        .content { padding: 30px; }
+        h2 { color: #1a1a2e; font-size: 20px; margin: 30px 0 15px; padding-bottom: 10px; border-bottom: 2px solid #e94560; }
+        h3 { color: #333; font-size: 16px; margin: 20px 0 10px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px; }
+        th { background: #1a1a2e; color: #fff; padding: 12px 10px; text-align: left; font-weight: 600; }
+        td { padding: 10px; border-bottom: 1px solid #eee; }
+        tr:hover { background: #f8f9fa; }
+        tr:nth-child(even) { background: #fafbfc; }
+        .positive { color: #e94560; font-weight: 600; }
+        .negative { color: #28a745; }
+        .conclusion { background: linear-gradient(135deg, #fef9f9 0%, #fff5f5 100%); border-left: 4px solid #e94560; padding: 20px; margin: 20px 0; border-radius: 8px; }
+        .conclusion li { margin: 10px 0; }
+        .footer { background: #f8f9fa; padding: 20px; text-align: center; color: #666; font-size: 13px; border-top: 1px solid #eee; }
+        ul, ol { padding-left: 25px; }
+        li { margin: 5px 0; }
+        strong { color: #1a1a2e; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>📈 早盘策略</h1>
-            <div class="date">2026年4月17日 星期五 | 08:53</div>
-            <div class="subtitle">数据采集时间：2026-04-17 08:30-08:50 | 数据来源：东方财富、同花顺、证券时报等</div>
+            <div class="date">2026年4月17日（星期五）</div>
         </div>
-
-        <!-- 外盘环境 -->
-        <div class="card">
-            <h2><span class="icon">🌍</span>外盘环境</h2>
+        <div class="content">
+            
+            <h2>一、外部环境（看风险偏好）</h2>
             <table>
-                <tr><th>品种</th><th>最新数据</th><th>涨跌幅</th><th>信号</th></tr>
-                <tr><td>道琼斯指数</td><td>48,578.72点</td><td class="up">+0.24%</td><td>高位震荡</td></tr>
-                <tr><td>标普500</td><td>7,041.28点</td><td class="up">+0.26%</td><td>历史新高</td></tr>
-                <tr><td>纳斯达克</td><td>24,102.70点</td><td class="up">+0.36%</td><td>12连涨创历史新高</td></tr>
-                <tr><td>纳斯达克中国金龙指数</td><td>7,192.17点</td><td class="up">+1.74%</td><td>中概股普涨</td></tr>
-                <tr><td>富时A50期指</td><td>15,435点</td><td class="down">-0.35%</td><td>夜盘小幅回落</td></tr>
-                <tr><td>离岸人民币</td><td>6.8219</td><td class="down">-0.01%</td><td>基本稳定，略有升值</td></tr>
-                <tr><td>美元指数</td><td>98.21</td><td class="up">+0.16%</td><td>小幅走强</td></tr>
-                <tr><td>WTI原油</td><td>94.69美元/桶</td><td class="up">+3.72%</td><td>大涨，油价反弹</td></tr>
-                <tr><td>COMEX黄金</td><td>4,810.9美元/盎司</td><td class="down">-0.26%</td><td>小幅回落</td></tr>
+                <tr><th>指标</th><th>数据</th><th>解读</th></tr>
+                <tr><td><strong>道指</strong></td><td>48,578.72（+0.24%）</td><td>高位震荡</td></tr>
+                <tr><td><strong>纳指</strong></td><td class="positive">24,102.70（<strong>+0.36%，12连涨创历史新高</strong>）</td><td>科技股强势</td></tr>
+                <tr><td><strong>标普500</strong></td><td class="positive">7,041.28（<strong>+0.26%，首次站上7000点</strong>）</td><td>历史新高</td></tr>
+                <tr><td><strong>中国金龙指数</strong></td><td>7,192.17（+1.74%）</td><td>中概股普涨</td></tr>
+                <tr><td><strong>A50期指夜盘</strong></td><td class="negative">15,435点（-0.35%）</td><td>小幅回落</td></tr>
+                <tr><td><strong>离岸人民币</strong></td><td>6.8219</td><td>基本稳定</td></tr>
+                <tr><td><strong>美元指数</strong></td><td>98.21（+0.16%）</td><td>小幅走强</td></tr>
+                <tr><td><strong>WTI原油</strong></td><td class="positive">94.69美元/桶（<strong>+3.72%</strong>）</td><td>大涨</td></tr>
             </table>
-            <div class="signal-box">
-                <div class="signal">
-                    <h3>✅ 积极信号</h3>
-                    <p>纳指12连涨创历史新高，科技股强势；中国金龙指数涨1.74%，中概股普涨；中美关系预期改善</p>
-                </div>
-                <div class="signal warning">
-                    <h3>⚠️ 关注风险</h3>
-                    <p>A50夜盘小幅回落0.35%；油价大涨可能压制航空等板块；美元小幅走强</p>
-                </div>
-            </div>
-        </div>
+            <p><strong>核心逻辑</strong>：纳指12连涨创历史新高，中概股金龙指数涨1.74%，外盘情绪偏暖。但A50夜盘回落0.35%，油价大涨3.72%可能压制航空板块。</p>
 
-        <!-- A股昨日表现 -->
-        <div class="card">
-            <h2><span class="icon">📊</span>A股昨日表现（4月16日）</h2>
+            <h2>二、开盘方向（看A50+北向）</h2>
             <table>
-                <tr><th>指数</th><th>收盘点位</th><th>涨跌幅</th><th>备注</th></tr>
-                <tr><td>上证指数</td><td>4,055.55点</td><td class="up">+0.70%</td><td>缩量上涨，站稳4050</td></tr>
-                <tr><td>深证成指</td><td>14,796.33点</td><td class="up">+2.05%</td><td>创逾4年新高</td></tr>
-                <tr><td>创业板指</td><td>3,626.27点</td><td class="up">+3.17%</td><td>创2015年6月以来近11年新高</td></tr>
-                <tr><td>科创50</td><td>1,422.23点</td><td class="up">+1.13%</td><td>站上60日均线</td></tr>
+                <tr><th>指标</th><th>数据</th><th>信号</th></tr>
+                <tr><td><strong>A50期指夜盘</strong></td><td class="negative">15,435点（-0.35%）</td><td>小幅承压</td></tr>
+                <tr><td><strong>北向资金（昨日）</strong></td><td class="positive">净流入+42.68亿元</td><td>连续流入</td></tr>
+                <tr><td><strong>主力资金（昨日）</strong></td><td class="positive">净流入+197.64亿元</td><td>超大单+239亿，大单-48亿</td></tr>
             </table>
-            <div style="margin-top: 16px;">
-                <table>
-                    <tr><th>指标</th><th>数据</th><th>信号</th></tr>
-                    <tr><td>两市成交额</td><td>约2.34万亿元</td><td>较前日缩量736亿，仍维持高位</td></tr>
-                    <tr><td>上涨/下跌</td><td>约4293家/约1072家</td><td>涨跌比约4:1，赚钱效应强</td></tr>
-                    <tr><td>北向资金</td><td>净流入约42.68亿元</td><td>连续多日净流入，加仓成长龙头</td></tr>
-                    <tr><td>主力资金</td><td>净流入约197.64亿元</td><td>超大单净流入240亿，但大单净流出48亿</td></tr>
-                </table>
-            </div>
-        </div>
+            <p><strong>开盘预期</strong>：低开 -0.2%~-0.4%</p>
 
-        <!-- 政策与消息面 -->
-        <div class="card">
-            <h2><span class="icon">📰</span>政策与消息面</h2>
-            <div style="margin-bottom: 16px;">
-                <h3 style="color: #2e7d32; margin-bottom: 10px;">🌟 核心利好</h3>
-                <ul style="font-size: 14px; padding-left: 20px; line-height: 2;">
-                    <li><strong>一季度GDP超预期</strong>：同比增长5.0%，高于预期4.8%，经济复苏确认</li>
-                    <li><strong>国资委重磅定调低空经济</strong>：央企要带头推进低空经济产业发展，纳入产业焕新行动</li>
-                    <li><strong>台积电AI供不应求延续至2027年</strong>：高性能计算和AI需求"极其强劲"，利好算力产业链</li>
-                    <li><strong>宁德时代一季报暴增</strong>：净利润同比+48.52%，营收1291亿元，续创历史新高</li>
-                    <li><strong>中际旭创一季度净利+262%</strong>：AI光模块需求爆发，业绩大超预期</li>
-                    <li><strong>人形机器人生态大会召开</strong>（4月17日）：特斯拉Optimus量产预期升温</li>
-                </ul>
-            </div>
-            <div>
-                <h3 style="color: #e65100; margin-bottom: 10px;">⚠️ 需关注事项</h3>
-                <ul style="font-size: 14px; padding-left: 20px; line-height: 2;">
-                    <li><strong>周五效应</strong>：资金周末避险，尾盘易回落</li>
-                    <li><strong>高位股回调压力</strong>：AI算力、新能源连续大涨后，获利盘兑现风险</li>
-                    <li><strong>量能小幅萎缩</strong>：成交额较前日减少736亿，追高动力减弱</li>
-                    <li><strong>退市风险警示</strong>：网达软件、实达集团、GQY视讯存在*ST风险</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- 热门板块预判 -->
-        <div class="card">
-            <h2><span class="icon">🔥</span>热门板块预判</h2>
+            <h2>三、ETF资金流向分析（4月16日）</h2>
+            
+            <h3>1. 宽基ETF申赎数据</h3>
             <table>
-                <tr><th>板块</th><th>预判</th><th>逻辑</th></tr>
-                <tr>
-                    <td><strong>AI算力/CPO/光模块</strong></td>
-                    <td class="up">⭐ 持续强势</td>
-                    <td>中际旭创一季报+262%超预期，台积电定调AI供不应求至2027年，算力需求强劲</td>
-                </tr>
-                <tr>
-                    <td><strong>锂电池/能源金属</strong></td>
-                    <td class="up">⭐ 持续走强</td>
-                    <td>宁德时代业绩暴增+48%，赣锋锂业扭亏为盈，锂价持续反弹</td>
-                </tr>
-                <tr>
-                    <td><strong>低空经济</strong></td>
-                    <td class="up">⭐ 政策催化</td>
-                    <td>国资委专题推进会定调，央企带头发展低空经济</td>
-                </tr>
-                <tr>
-                    <td><strong>人形机器人</strong></td>
-                    <td class="up">⭐ 事件驱动</td>
-                    <td>4月17日生态大会召开，特斯拉Optimus量产预期升温</td>
-                </tr>
-                <tr>
-                    <td><strong>有色金属</strong></td>
-                    <td class="up">↑ 业绩驱动</td>
-                    <td>中国铝业Q1净利+50%-58%，铜价突破10.2万/吨</td>
-                </tr>
-                <tr>
-                    <td><strong>银行/白酒/医药</strong></td>
-                    <td class="down">→ 承压休整</td>
-                    <td>A50下跌拖累权重股；高位题材分化，资金向成长轮动</td>
-                </tr>
+                <tr><th>ETF</th><th>代码</th><th>净申购/赎回</th><th>信号</th></tr>
+                <tr><td><strong>沪深300ETF</strong></td><td>510300</td><td class="negative"><strong>净赎回-10.37亿</strong></td><td>⚠️ 大盘蓝筹止盈</td></tr>
+                <tr><td><strong>中证A500ETF</strong></td><td>-</td><td class="negative">净赎回-9.17亿</td><td>流出</td></tr>
+                <tr><td><strong>科创50ETF</strong></td><td>588000</td><td class="negative">净赎回-5.02亿</td><td>⚠️ 科技兑现</td></tr>
+                <tr><td><strong>上证50ETF</strong></td><td>510100</td><td class="positive"><strong>净流入+7.26亿</strong></td><td>✅ 防御吸金</td></tr>
+                <tr><td><strong>中证500ETF</strong></td><td>510500</td><td class="positive"><strong>净流入+4.08亿</strong></td><td>✅ 中盘吸金</td></tr>
+                <tr><td><strong>中证1000ETF</strong></td><td>512100</td><td class="positive">净流入+2.59亿</td><td>✅ 小盘吸金</td></tr>
             </table>
-        </div>
-
-        <!-- 重点关注个股 -->
-        <div class="card">
-            <h2><span class="icon">💎</span>重点关注个股（15只）</h2>
-            <div class="stock-grid">
-                <div class="stock-item">
-                    <h4>兴发集团 (600141)</h4>
-                    <div class="price">32.47元 <span class="change up">+2.33%</span></div>
-                    <div class="info">草甘膦价格稳步上行；磷酸铁锂项目投资13.81亿元；硫酸涨价受益</div>
-                </div>
-                <div class="stock-item">
-                    <h4>雅化集团 (002497)</h4>
-                    <div class="price">约22-23元 <span class="change up">震荡</span></div>
-                    <div class="info">津巴布韦锂矿出口预期恢复；巴西锂精矿协议年供18万吨；民爆+锂电双主业</div>
-                </div>
-                <div class="stock-item">
-                    <h4>中国铝业 (601600)</h4>
-                    <div class="price">12.80元 <span class="change up">+4.07%</span></div>
-                    <div class="info">一季度净利预增50%-58%；铝价受海外供应扰动提振；主力净买入3.66亿</div>
-                </div>
-                <div class="stock-item">
-                    <h4>云天化 (600096)</h4>
-                    <div class="price">33.81元 <span class="change up">+2.58%</span></div>
-                    <div class="info">磷化工龙头；引入当升科技投建44.93亿新能源项目；高分红，股息率约3.6%</div>
-                </div>
-                <div class="stock-item">
-                    <h4>湖北宜化 (000422)</h4>
-                    <div class="price">约15.5元 <span class="change down">-3.36%</span></div>
-                    <div class="info">磷化工+尿素；4万吨季戊四醇项目投产；50万吨磷酸铁项目开工</div>
-                </div>
-                <div class="stock-item">
-                    <h4>航天电子 (600879)</h4>
-                    <div class="price">23.16元 <span class="change down">-0.17%</span></div>
-                    <div class="info">商业航天概念；4月14日主力净买入5.03亿；融资余额28.86亿</div>
-                </div>
-                <div class="stock-item">
-                    <h4>航天发展 (000547)</h4>
-                    <div class="price">约27.67元 <span class="change up">+1.84%</span></div>
-                    <div class="info">近20日主力净流出28.9亿；天目一号卫星组网运行；4月29日披露年报</div>
-                </div>
-                <div class="stock-item">
-                    <h4>宁德时代 (300750)</h4>
-                    <div class="price">创历史新高 <span class="change up">+5.33%</span></div>
-                    <div class="info">一季度净利+48.52%，营收1291亿；市值突破2万亿；储能需求爆发</div>
-                </div>
-                <div class="stock-item">
-                    <h4>中际旭创 (300308)</h4>
-                    <div class="price">一季度净利+262%</div>
-                    <div class="info">AI光模块龙头；一季报提前至4月17日披露；市值近9000亿，冲击万亿</div>
-                </div>
-                <div class="stock-item">
-                    <h4>天孚通信 (300620)</h4>
-                    <div class="price">主力净流入16.69亿</div>
-                    <div class="info">光模块核心标的；AI算力需求带动；主力资金持续加仓</div>
-                </div>
-                <div class="stock-item">
-                    <h4>新易盛 (300502)</h4>
-                    <div class="price">主力净流入30.83亿</div>
-                    <div class="info">CPO/光模块龙头；主力资金大举抢筹；算力主线核心</div>
-                </div>
-                <div class="stock-item">
-                    <h4>赣锋锂业 (002460)</h4>
-                    <div class="price">一季度扭亏为盈</div>
-                    <div class="info">预计净利润16-21亿元；锂价上涨受益；2025年净利扭亏</div>
-                </div>
-                <div class="stock-item">
-                    <h4>华友钴业 (603799)</h4>
-                    <div class="price">一季度+99.45%</div>
-                    <div class="info">净利润24.97亿元；钴锂镍一体化；新能源资源龙头</div>
-                </div>
-                <div class="stock-item">
-                    <h4>紫金矿业 (601899)</h4>
-                    <div class="price">一季度+128%</div>
-                    <div class="info">铜金双料龙头；主力净流入4.81亿；硫酸涨价受益</div>
-                </div>
-                <div class="stock-item">
-                    <h4>北方稀土 (600111)</h4>
-                    <div class="price">一季度+109%-118%</div>
-                    <div class="info">稀土绝对龙头；一季报预增翻倍；新能源需求支撑</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 今日预判 -->
-        <div class="card">
-            <h2><span class="icon">🎯</span>今日大盘预判（4月17日）</h2>
-            <div class="prediction">
-                <h3>核心结论：低开震荡、结构分化、收小阴/十字星</h3>
-                <div class="prediction-grid">
-                    <div class="pred-item">
-                        <div class="label">上证指数支撑</div>
-                        <div class="value">4020-4030</div>
-                        <div class="range">强支撑：4000点</div>
-                    </div>
-                    <div class="pred-item">
-                        <div class="label">上证指数压力</div>
-                        <div class="value">4055-4080</div>
-                        <div class="range">突破需放量至2.5万亿+</div>
-                    </div>
-                    <div class="pred-item">
-                        <div class="label">创业板支撑</div>
-                        <div class="value">3600点</div>
-                        <div class="range">强势，整固后继续上行</div>
-                    </div>
-                    <div class="pred-item">
-                        <div class="label">创业板压力</div>
-                        <div class="value">3650-3680</div>
-                        <div class="range">量能充足可挑战</div>
-                    </div>
-                </div>
-            </div>
-            <div style="margin-top: 16px;">
-                <h3 style="color: #1565c0; margin-bottom: 10px;">走势节奏预判</h3>
-                <ul style="font-size: 14px; padding-left: 20px; line-height: 2;">
-                    <li><strong>早盘</strong>：小幅低开（受A50夜盘回落影响），权重股承压，指数先探底</li>
-                    <li><strong>午盘</strong>：AI算力、新能源、机器人等主线发力，指数震荡回升</li>
-                    <li><strong>尾盘</strong>：周五避险情绪，资金减仓，指数小幅回落</li>
-                </ul>
-            </div>
-            <div class="signal-box">
-                <div class="signal">
-                    <h3>⭐ 情景1（概率50%）</h3>
-                    <p><strong>震荡上行，挑战4100</strong><br>主线持续发力，量能维持2.4万亿+，沪指震荡走强</p>
-                </div>
-                <div class="signal">
-                    <h3>📊 情景2（概率35%）</h3>
-                    <p><strong>冲高回落，4000-4080震荡</strong><br>高位整固，分批止盈，消化获利盘</p>
-                </div>
-                <div class="signal warning">
-                    <h3>⚠️ 情景3（概率15%）</h3>
-                    <p><strong>缩量回调，回踩3950-4000</strong><br>北向大幅流出，量能不足，高位股集中兑现</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 操作建议 -->
-        <div class="card">
-            <h2><span class="icon">💡</span>操作建议</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
-                <div style="background: #e8f5e9; padding: 16px; border-radius: 10px; border-left: 4px solid #43a047;">
-                    <h3 style="color: #2e7d32; margin-bottom: 8px;">✅ 重点关注</h3>
-                    <ul style="font-size: 13px; padding-left: 16px; line-height: 1.8;">
-                        <li>AI算力/CPO/光模块（最强主线）</li>
-                        <li>锂电池/能源金属（业绩爆发）</li>
-                        <li>人形机器人（事件催化）</li>
-                        <li>低空经济（政策支持）</li>
-                    </ul>
-                </div>
-                <div style="background: #fff3e0; padding: 16px; border-radius: 10px; border-left: 4px solid #ff9800;">
-                    <h3 style="color: #e65100; margin-bottom: 8px;">⚠️ 需规避</h3>
-                    <ul style="font-size: 13px; padding-left: 16px; line-height: 1.8;">
-                        <li>高位小票（连板股注意止盈）</li>
-                        <li>存在退市风险个股</li>
-                        <li>短期涨幅过大、无业绩支撑</li>
-                    </ul>
-                </div>
-                <div style="background: #e3f2fd; padding: 16px; border-radius: 10px; border-left: 4px solid #1976d2;">
-                    <h3 style="color: #1565c0; margin-bottom: 8px;">📌 操作策略</h3>
-                    <ul style="font-size: 13px; padding-left: 16px; line-height: 1.8;">
-                        <li>仓位：6-7成，不重仓满仓</li>
-                        <li>原则：不追高、逢低买</li>
-                        <li>关注：量能、北向资金流向</li>
-                        <li>止盈：高位股冲高卖出</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- 风险提示 -->
-        <div class="card" style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); border-left: 4px solid #e53935;">
-            <h2 style="color: #c62828; border-bottom-color: #ffcdd2;"><span class="icon">⚠️</span>风险提示</h2>
-            <ul style="font-size: 14px; padding-left: 20px; line-height: 2;">
-                <li><strong>周五效应</strong>：资金周末避险，尾盘易回落</li>
-                <li><strong>高位股回调</strong>：AI算力、新能源连续大涨后，获利盘兑现压力增大</li>
-                <li><strong>量能萎缩</strong>：成交额2.34万亿较前日减少736亿，追高动力减弱</li>
-                <li><strong>技术压力</strong>：KDJ指标J值达106超买，30/60分钟顶背离</li>
-                <li><strong>外部扰动</strong>：美联储政策、地缘政治仍有不确定性</li>
+            <p><strong>关键信号</strong>：</p>
+            <ul>
+                <li>上交所ETF连续6日净赎回，累计564亿元</li>
+                <li><strong>"大盘流出、中小盘流入"格局明显</strong></li>
+                <li>红利ETF净流入+3.81亿，防御性配置持续</li>
             </ul>
-            <p style="margin-top: 16px; font-size: 13px; color: #c62828; text-align: center;">
-                <strong>免责声明：</strong>本报告仅供参考，不构成投资建议。股市有风险，投资需谨慎。
-            </p>
-        </div>
 
+            <h3>2. ETF资金流入TOP5</h3>
+            <table>
+                <tr><th>排名</th><th>ETF名称</th><th>净流入额</th></tr>
+                <tr><td>1</td><td>卫星ETF永赢</td><td class="positive">+7.35亿</td></tr>
+                <tr><td>2</td><td>中证红利指数ETF</td><td class="positive">+3.81亿</td></tr>
+                <tr><td>3</td><td>中证电力公用事业ETF</td><td class="positive">+1.25亿</td></tr>
+                <tr><td>4</td><td>中证建筑材料ETF</td><td class="positive">+1.25亿</td></tr>
+                <tr><td>5</td><td>中证机床ETF</td><td class="positive">+1.12亿</td></tr>
+            </table>
+
+            <h3>3. ETF资金流出TOP5</h3>
+            <table>
+                <tr><th>排名</th><th>ETF名称</th><th>净流出额</th></tr>
+                <tr><td>1</td><td>沪深300ETF</td><td class="negative">-10.37亿</td></tr>
+                <tr><td>2</td><td>中证A500ETF</td><td class="negative">-9.17亿</td></tr>
+                <tr><td>3</td><td>科创50ETF</td><td class="negative">-5.02亿</td></tr>
+                <tr><td>4</td><td>科创芯片ETF</td><td class="negative">-3.87亿</td></tr>
+                <tr><td>5</td><td>人工智能ETF</td><td class="negative">-2.91亿</td></tr>
+            </table>
+            <p><strong>资金格局</strong>：大盘宽基被持续赎回，资金转向红利、上证50避险；中证500/1000局部吸金，热门科技/新能源高位兑现。</p>
+
+            <h2>四、今日大盘预判</h2>
+            
+            <h3>📊 核心点位</h3>
+            <table>
+                <tr><th>类型</th><th>位置</th></tr>
+                <tr><td><strong>上证指数支撑</strong></td><td>4020-4030（5日均线）、4000（整数关口）</td></tr>
+                <tr><td><strong>上证指数压力</strong></td><td>4055-4080（前期高点）</td></tr>
+                <tr><td><strong>创业板支撑</strong></td><td>3600点</td></tr>
+                <tr><td><strong>创业板压力</strong></td><td>3650-3680</td></tr>
+            </table>
+
+            <h3>🎯 走势预判</h3>
+            <table>
+                <tr><th>情景</th><th>概率</th><th>条件</th><th>指数区间</th></tr>
+                <tr><td><strong>乐观</strong></td><td>15%</td><td>放量至2.5万亿+，主线持续发力</td><td class="positive">4080-4100</td></tr>
+                <tr><td><strong>基准</strong></td><td>60%</td><td>低开震荡，量能2.3-2.4万亿</td><td>4020-4060</td></tr>
+                <tr><td><strong>悲观</strong></td><td>25%</td><td>缩量回调，北向大幅流出</td><td class="negative">3980-4020</td></tr>
+            </table>
+
+            <h3>🔥 风格判断</h3>
+            <ul>
+                <li><strong>大盘 vs 小盘</strong>：中小盘（中证500/1000）延续占优</li>
+                <li><strong>成长 vs 价值</strong>：成长主线强，但高位分化</li>
+            </ul>
+
+            <h3>📌 热点板块预判</h3>
+            <table>
+                <tr><th>方向</th><th>逻辑</th><th>代表标的</th></tr>
+                <tr><td><strong>AI算力/光模块</strong></td><td>中际旭创业绩+262%超预期</td><td>中际旭创、天孚通信、新易盛</td></tr>
+                <tr><td><strong>锂电池/能源金属</strong></td><td>宁德时代业绩+48%，锂价反弹</td><td>宁德时代、赣锋锂业、雅化集团</td></tr>
+                <tr><td><strong>人形机器人</strong></td><td>生态大会召开催化</td><td>减速器、伺服、传感器</td></tr>
+                <tr><td><strong>低空经济</strong></td><td>国资委定调政策支持</td><td>航天电子、航天发展</td></tr>
+                <tr><td><strong>有色金属</strong></td><td>中国铝业Q1净利+50%-58%</td><td>中国铝业、云天化、兴发集团</td></tr>
+            </table>
+            <p><strong>承压板块</strong>：银行、白酒、医药（A50回落拖累权重）</p>
+
+            <h2>五、重点关注个股动态</h2>
+            <table>
+                <tr><th>个股</th><th>代码</th><th>核心逻辑</th></tr>
+                <tr><td>兴发集团</td><td>600141</td><td>草甘膦上行+硫酸涨价受益</td></tr>
+                <tr><td>雅化集团</td><td>002497</td><td>津巴布韦锂矿预期恢复，锂价反弹</td></tr>
+                <tr><td>中国铝业</td><td>601600</td><td>Q1净利预增+50%-58%，主力净买入3.66亿</td></tr>
+                <tr><td>云天化</td><td>600096</td><td>磷化工龙头，高分红约3.6%</td></tr>
+                <tr><td>航天电子</td><td>600879</td><td>商业航天概念，4月14日主力净买入5.03亿</td></tr>
+                <tr><td>航天发展</td><td>000547</td><td>商业航天概念</td></tr>
+            </table>
+
+            <h2>六、今日关注事项</h2>
+            <ol>
+                <li><strong>周五效应</strong>：资金周末避险，尾盘易回落</li>
+                <li><strong>股指期货交割日</strong>：波动加大，多空博弈加剧</li>
+                <li><strong>量能变化</strong>：能否维持在2.3万亿以上</li>
+                <li><strong>北向资金</strong>：流向是否延续净流入</li>
+            </ol>
+
+            <h2>七、操作建议</h2>
+            <table>
+                <tr><th>维度</th><th>建议</th></tr>
+                <tr><td><strong>仓位</strong></td><td>6-7成，不重仓不满仓</td></tr>
+                <tr><td><strong>方向</strong></td><td>AI算力、新能源、机器人等主线</td></tr>
+                <tr><td><strong>买点</strong></td><td>回踩4020-4030低吸主线龙头</td></tr>
+                <tr><td><strong>卖点</strong></td><td>4055-4080分批止盈，高位股冲高卖出</td></tr>
+                <tr><td><strong>风险</strong></td><td>4020有效跌破需减仓</td></tr>
+            </table>
+
+            <div class="conclusion">
+                <h2>✅ 核心结论（3条）</h2>
+                <ol>
+                    <li><strong>外盘偏暖但A50承压</strong>：纳指12连涨创新高，但A50夜盘回落0.35%，预计低开震荡</li>
+                    <li><strong>ETF资金"大盘流出、中小盘流入"</strong>：沪深300连续赎回，中证500/1000吸金，红利ETF避险配置</li>
+                    <li><strong>量能是关键</strong>：今日能否维持2.3万亿决定反弹延续性；周五尾盘注意落袋为安</li>
+                </ol>
+            </div>
+
+        </div>
         <div class="footer">
-            <p>早盘策略报告 | 生成时间：2026-04-17 08:53</p>
-            <p>数据来源：东方财富、同花顺、证券时报、央广财经等 | 报告编号：20260417-AM</p>
+            <p><strong>数据来源</strong>：东方财富、同花顺、证券时报</p>
+            <p><strong>生成时间</strong>：2026-04-17 09:23</p>
         </div>
     </div>
 </body>
